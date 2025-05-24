@@ -8,24 +8,10 @@ import json
 import io
 import pandas as pd
 from datetime import datetime, timedelta
-#from google.cloud import secretmanager
 import pytz
 import joblib
 
-'''def get_service_account_key(secret_name):
-    client = secretmanager.SecretManagerServiceClient()
-    name = f"projects/812485502403/secrets/{secret_name}/versions/latest"
-    response = client.access_secret_version(request={"name": name})
-    return response.payload.data.decode("UTF-8")
-
-service_account_file = get_service_account_key("SERVICE_ACCOUNT_KEY")'''
-
-# Path to your service account credentials JSON file
-#service_account_file = '/Users/iuriiagafonov/Documents/PERSONAL PROJECTS/INFOCOM/peace_process/cloud collection/peaceprocess-0b61b099c89e.json'
-service_account_file = 'peaceprocess-0b61b099c89e.json'
-#service_account_file = json.loads(os.environ["SERVICE_ACCOUNT_KEY"])
-#print("All environment variables:", os.environ)
-#service_account_file = os.environ.get("SERVICE_ACCOUNT_KEY")
+service_account_file = 'NAME OF YOUR GOOGLE SERVICE ACCOUNT FILE'
 print(f"Service account file: {service_account_file}")
 
 # Authenticate with service account credentials
